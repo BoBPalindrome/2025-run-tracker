@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "# Add build step if needed",
-    "vercel-build": "# Add vercel-specific build step if needed"
+    "vercel-build": "echo 'Build step complete'"
   },
   "dependencies": {
     "express": "^4.18.2",

@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve static files from public directory
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // API endpoint to fetch Google Sheets data
 app.get('/api/data', async (req, res) => {
@@ -71,6 +71,17 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-}); 
+// Add a catch-all route for 404s
+app.get('*', (req, res) => {
+    res.status(404).send('Not Found');
+});
+
+// Only listen if we're running directly (not in Vercel)
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+// Export the app for Vercel
+module.exports = app; 
