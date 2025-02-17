@@ -1,0 +1,69 @@
+#calendar-heatmap, #progress-chart {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.heatmap-cell {
+    fill: #eee;
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.heatmap-cell:hover {
+    stroke: #555;
+    stroke-width: 2px;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.progress-line {
+    fill: none;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.target-line {
+    opacity: 0.6;
+}
+
+.total-label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.x-axis text, .y-axis text {
+    font-size: 10px;
+}
+
+.progress-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress-bar-bg {
+    fill: #e0e0e0;
+    stroke: #ccc;
+    stroke-width: 1px;
+}
+
+.progress-bar {
+    fill: #004225;  /* British Racing Green */
+}
+
+.goal-pace-line {
+    stroke: #ff0000;
+    stroke-width: 2px;
+}
+
+.progress-stats {
+    font-size: 14px;
+    fill: #333;
+} 

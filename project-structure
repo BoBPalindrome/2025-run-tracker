@@ -1,0 +1,10 @@
+calendar-heatmap-project/
+  ├── public/
+  │   ├── css/
+  │   │   └── styles.css
+  │   └── js/
+  │       └── heatmap.js
+  ├── views/
+  │   └── index.html
+  ├── server.js
+  └── package.json 
